@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Satish &amp; Baby | Barristers, Solicitors &amp; Commercial Counsel</title>
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#0B1528',
+              slate: '#1E293B',
+              gold: '#C5A85A',
+              goldLight: '#E2D19B',
+              goldDark: '#997D33',
+              parchment: '#F9F8F5',
+              surface: '#F4F1EA'
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #E2D19B 0%, #C5A85A 50%, #997D33 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #0B1528;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #C5A85A;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+
+<body class="bg-brand-parchment text-slate-800 font-sans antialiased selection:bg-brand-gold selection:text-white relative">
+
+  <!-- ========================================================================= -->
+  <!-- 1. REGULATORY DISCLAIMER MODAL (Inline Safe Click Handler)               -->
+  <!-- ========================================================================= -->
+  <div id="disclaimer-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md px-4 transition-opacity duration-300">
+    <div class="bg-brand-navy border border-brand-gold/40 text-slate-200 max-w-2xl w-full p-8 md:p-10 shadow-2xl relative rounded-sm">
+      <div class="flex items-center space-x-3 mb-6 border-b border-brand-gold/20 pb-4">
+        <i class="fa-solid fa-scale-balanced text-brand-gold text-2xl"></i>
+        <h2 class="font-serif text-2xl md:text-3xl font-bold tracking-wide text-white">Regulatory Disclaimer &amp; Notice</h2>
+      </div>
+      
+      <div class="space-y-4 text-sm text-slate-300 font-light leading-relaxed max-h-60 overflow-y-auto pr-2 custom-scrollbar">
+        <p class="font-medium text-brand-goldLight">
+          Please review the following statutory declarations before accessing the portal:
+        </p>
+        <p>
+          In accordance with regulatory rules and ethical standards governing the legal profession (including Bar Council guidelines and the Solicitors Regulation Authority regulations), this website is designed solely for informational, non-solicitation, and academic transparency purposes.
+        </p>
+        <p>
+          1. <strong>No Advertisement or Solicitation:</strong> The information provided under this portal does not constitute an advertisement, personal communication, solicitation, invitation, or inducement of any sort whatsoever by Vanguard &amp; Sterling LLP or any of its partners.
+        </p>
+        <p>
+          2. <strong>No Attorney-Client Privilege:</strong> Transmission, receipt, or utilization of this portal or communication via contact forms does not initiate, create, or constitute an attorney-client relationship.
+        </p>
+        <p>
+          3. <strong>Informational Scope:</strong> The materials published here should not be construed as definitive legal advice. The user acknowledges that access is gained solely on their independent inquiry.
+        </p>
+      </div>
+
+      <div class="mt-8 pt-6 border-t border-brand-gold/20 flex flex-col sm:flex-row gap-4 items-center justify-between">
+        <button type="button" onclick="window.location.href='https://www.google.com'" class="w-full sm:w-auto px-6 py-2.5 text-xs uppercase tracking-widest text-slate-400 hover:text-white transition">
+          Decline &amp; Exit
+        </button>
+        <button type="button" onclick="document.getElementById('disclaimer-modal').remove(); try { localStorage.setItem('vs_disclaimer_accepted', 'true'); } catch(e){}" class="w-full sm:w-auto px-8 py-3 bg-brand-gold hover:bg-brand-goldDark text-brand-navy font-semibold text-xs uppercase tracking-widest transition shadow-lg flex items-center justify-center space-x-2">
+          <span>I Acknowledge &amp; Enter</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- 2. TOP BANNER / CREDENTIALS BAR                                          -->
+  <!-- ========================================================================= -->
+  <header class="bg-brand-navy text-slate-300 text-xs py-2 border-b border-brand-gold/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-2">
+      <div class="flex items-center space-x-6">
+        <span><i class="fa-solid fa-location-dot text-brand-gold mr-1.5"></i> New Delhi &bull; India</span>
+        <span class="hidden sm:inline text-slate-500">|</span>
+        <span class="hidden sm:inline"><i class="fa-solid fa-shield-halved text-brand-gold mr-1.5"></i> Authorized Institutional Counsel</span>
+      </div>
+        </button>
+        <span class="text-slate-500">|</span>
+        <a href="tel:+919899233667" class="hover:text-white transition">+919899233667 , 919599439768</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- 3. MAIN NAVIGATION BAR                                                   -->
+  <!-- ========================================================================= -->
+  <nav class="sticky top-0 z-40 bg-brand-navy/95 backdrop-blur-md border-b border-white/10 text-white transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <!-- Brand Logo -->
+        <a href="#" class="flex items-center space-x-3 group">
+          <div class="w-10 h-10 border border-brand-gold flex items-center justify-center bg-brand-navy group-hover:bg-brand-gold transition duration-300">
+            <span class="font-serif text-xl font-bold text-brand-gold group-hover:text-brand-navy transition duration-300">SBS</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-serif text-xl sm:text-2xl font-bold tracking-wider uppercase text-white">SBS Authentic Legum</span>
+            <span class="text-[9px] uppercase tracking-[0.25em] text-brand-gold">Barristers &bull; Solicitors &bull; Arbitrators</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="hidden lg:flex items-center space-x-8 text-xs uppercase tracking-widest font-medium">
+          <a href="#about" class="hover:text-brand-gold transition">Firm Profile</a>
+          <a href="#practices" class="hover:text-brand-gold transition">Expertise</a>
+          <a href="#partners" class="hover:text-brand-gold transition">Our Team</a>
+          <a href="#contact" class="hover:text-brand-gold transition">Offices</a>
+          <a href="#contact" class="px-5 py-2.5 border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-brand-navy transition duration-300">
+            Consultation Inquiry
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-toggle" onclick="toggleMobileNav()" class="lg:hidden text-2xl text-brand-gold focus:outline-none">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-brand-navy border-t border-white/10 px-6 py-6 space-y-4 text-xs uppercase tracking-wider">
+      <a href="#about" onclick="toggleMobileNav()" class="block py-2 hover:text-brand-gold transition">Firm Profile</a>
+      <a href="#practices" onclick="toggleMobileNav()" class="block py-2 hover:text-brand-gold transition">Expertise</a>
+      <a href="#partners" onclick="toggleMobileNav()" class="block py-2 hover:text-brand-gold transition">Our Team</a>
+      <a href="#contact" onclick="toggleMobileNav()" class="block py-2 hover:text-brand-gold transition">Offices</a>
+      <a href="#contact" onclick="toggleMobileNav()" class="block py-3 text-center border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-brand-navy transition">
+        Consultation Inquiry
+      </a>
+    </div>
+  </nav>
+
+  <!-- ========================================================================= -->
+  <!-- 4. HERO SECTION                                                          -->
+  <!-- ========================================================================= -->
+  <section class="relative bg-brand-navy text-white overflow-hidden py-24 sm:py-32 border-b border-brand-gold/30">
+    <div class="absolute inset-0 opacity-15">
+      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=80" alt="Financial architecture" class="w-full h-full object-cover">
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/90 to-transparent"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl space-y-6">
+        <div class="inline-flex items-center space-x-2 border-b border-brand-gold/50 pb-1">
+          <span class="w-2 h-2 bg-brand-gold rounded-full"></span>
+          <span class="text-xs uppercase tracking-[0.2em] text-brand-gold font-semibold">Institutional Legal Counsel</span>
+        </div>
+        
+        <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white leading-tight">
+          Strategic Advocacy. <br>
+          <span class="gold-gradient-text italic font-normal">Strategic Precision.</span>
+        </h1>
+        
+        <p class="text-base sm:text-lg text-slate-300 font-light leading-relaxed max-w-2xl">
+          "Trusted counsel to institutional leaders, private clients, and global corporations navigating complex disputes, cross-border deals, and regulatory scrutiny."
+        </p>
+
+        <div class="pt-4 flex flex-col sm:flex-row gap-4">
+          <a href="#practices" class="px-8 py-3.5 bg-brand-gold hover:bg-brand-goldDark text-brand-navy font-bold text-xs uppercase tracking-widest transition duration-300 text-center shadow-lg">
+            Our Expertise
+          </a>
+          <a href="#partners" class="px-8 py-3.5 border border-white/30 hover:border-brand-gold text-white hover:text-brand-gold font-medium text-xs uppercase tracking-widest transition duration-300 text-center">
+            Our leaders
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 5. FIRM PROFILE & STATISTICAL HIGHLIGHTS                                  -->
+  <!-- ========================================================================= -->
+  <section id="about" class="py-20 bg-brand-surface border-b border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-5 space-y-5">
+          <span class="text-xs uppercase tracking-widest font-semibold text-brand-goldDark">Institutional Standing</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-navy leading-tight">
+            Over Ten Years of Decisive Legal Representation.
+          </h2>
+          <div class="w-12 h-0.5 bg-brand-gold"></div>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            SBS Authentic Legum (formerly Authentic Legal, est. 2015) is a premier full-service legal practice delivering tailored, strategy-driven solutions. We partner with business leaders and private clients to navigate regulatory complexity, manage enterprise risk, and execute critical transactions and dispute strategies with absolute precision.
+          </p>
+        </div>
+
+        <div class="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-6">
+          <div class="p-6 bg-white border border-stone-200 shadow-sm">
+            <div class="font-serif text-3xl sm:text-4xl font-bold text-brand-navy">10+ </div>
+            <div class="text-xs uppercase tracking-wider text-slate-500 mt-2 font-medium">Years of Trust</div>
+          </div>
+          <div class="p-6 bg-white border border-stone-200 shadow-sm">
+            <div class="font-serif text-3xl sm:text-4xl font-bold text-brand-navy">90%</div>
+            <div class="text-xs uppercase tracking-wider text-slate-500 mt-2 font-medium">Arbitral Favorable Ratio</div>
+          </div>
+          <div class="p-6 bg-white border border-stone-200 shadow-sm">
+            <div class="font-serif text-3xl sm:text-4xl font-bold text-brand-navy">3</div>
+            <div class="text-xs uppercase tracking-wider text-slate-500 mt-2 font-medium">Consultation Hubs</div>
+          </div>
+          <div class="p-6 bg-white border border-stone-200 shadow-sm">
+            <div class="font-serif text-3xl sm:text-4xl font-bold text-brand-navy">300+</div>
+            <div class="text-xs uppercase tracking-wider text-slate-500 mt-2 font-medium">clients Served</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 6. PRACTICE AREAS (Filterable Grid)                                      -->
+  <!-- ========================================================================= -->
+  <section id="practices" class="py-24 bg-brand-parchment">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div class="space-y-3">
+          <span class="text-xs uppercase tracking-widest font-semibold text-brand-goldDark">Core Competencies</span>
+          <h2 class="font-serif text-4xl font-bold text-brand-navy">Practice Disciplines</h2>
+        </div>
+        
+        <div class="mt-6 md:mt-0 flex flex-wrap gap-2">
+          <button onclick="filterPractices('all', this)" class="practice-tab-btn px-4 py-2 text-xs uppercase tracking-wider bg-brand-navy text-white transition">All Areas</button>
+          <button onclick="filterPractices('litigation', this)" class="practice-tab-btn px-4 py-2 text-xs uppercase tracking-wider bg-white border border-stone-300 text-slate-700 hover:bg-stone-100 transition">Litigation &amp; ADR</button>
+          <button onclick="filterPractices('corporate', this)" class="practice-tab-btn px-4 py-2 text-xs uppercase tracking-wider bg-white border border-stone-300 text-slate-700 hover:bg-stone-100 transition">Corporate &amp; M&amp;A</button>
+          <button onclick="filterPractices('regulatory', this)" class="practice-tab-btn px-4 py-2 text-xs uppercase tracking-wider bg-white border border-stone-300 text-slate-700 hover:bg-stone-100 transition">Regulatory &amp; IP</button>
+        </div>
+      </div>
+
+      <div id="practice-cards-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="practice-card p-8 bg-white border border-stone-200 shadow-sm hover:shadow-md transition duration-300 flex flex-col justify-between" data-category="litigation">
+          <div>
+            <div class="w-12 h-12 bg-brand-surface flex items-center justify-center text-brand-navy text-xl mb-6">
+              <i class="fa-solid fa-gavel"></i>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-brand-navy mb-3">Intellectual Property Rights (IPR)</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              We deliver end-to-end management of proprietary assets, from registration and commercial portfolio audits to IP transactions. Our team safeguards creative and industrial assets against unauthorized exploitation across domestic and global markets.
+            </p>
+          </div>
+        </div>
+
+        <div class="practice-card p-8 bg-white border border-stone-200 shadow-sm hover:shadow-md transition duration-300 flex flex-col justify-between" data-category="corporate">
+          <div>
+            <div class="w-12 h-12 bg-brand-surface flex items-center justify-center text-brand-navy text-xl mb-6">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-brand-navy mb-3">Copyright, Trademark & Infringement Litigation</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              We secure prompt injunctive relief and damages against brand counterfeiting, piracy, trademark dilution, and passing-off violations. Our advocates handle opposition hearings, rectification proceedings, and aggressive trial enforcement to defend market identity.   
+            </p>
+          </div>
+        </div>
+
+        <div class="practice-card p-8 bg-white border border-stone-200 shadow-sm hover:shadow-md transition duration-300 flex flex-col justify-between" data-category="regulatory">
+          <div>
+            <div class="w-12 h-12 bg-brand-surface flex items-center justify-center text-brand-navy text-xl mb-6">
+              <i class="fa-solid fa-shield-virus"></i>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-brand-navy mb-3">Civil Matters & Property Disputes</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              We represent individuals and enterprises in suits for specific performance, injunctions, partition, title verification, and asset recovery. Our practice ensures strategic dispute resolution across trial courts, appellate benches, and specialized civil tribunals.
+            </p>
+          </div>
+        </div>
+
+        <div class="practice-card p-8 bg-white border border-stone-200 shadow-sm hover:shadow-md transition duration-300 flex flex-col justify-between" data-category="litigation">
+          <div>
+            <div class="w-12 h-12 bg-brand-surface flex items-center justify-center text-brand-navy text-xl mb-6">
+              <i class="fa-solid fa-building-columns"></i>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-brand-navy mb-3">Criminal Defense & White-Collar Matters</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              We provide counsel for trial defense, regular and anticipatory bail, economic offenses, and statutory investigations. From FIR quashing to appellate advocacy, we safeguard client liberties with meticulous procedural rigor.
+            </p>
+          </div>
+        </div>
+
+        <div class="practice-card p-8 bg-white border border-stone-200 shadow-sm hover:shadow-md transition duration-300 flex flex-col justify-between" data-category="regulatory">
+          <div>
+            <div class="w-12 h-12 bg-brand-surface flex items-center justify-center text-brand-navy text-xl mb-6">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-brand-navy mb-3">Matrimonial & Family Law</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              We handle matrimonial disputes with discretion, including contested divorce, mutual consent proceedings, child custody, and maintenance claims. Our counsel balances empathetic advisory with firm legal representation under applicable personal and domestic violence laws.
+            </p>
+          </div>
+        </div>
+
+        <div class="practice-card p-8 bg-white border border-stone-200 shadow-sm hover:shadow-md transition duration-300 flex flex-col justify-between" data-category="corporate">
+          <div>
+            <div class="w-12 h-12 bg-brand-surface flex items-center justify-center text-brand-navy text-xl mb-6">
+              <i class="fa-solid fa-landmark"></i>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-brand-navy mb-3">Writ Petitions & Constitutional Remedies, PIL-Supreme Court</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              We invoke the extraordinary writ jurisdictions of the High Courts and the Supreme Court under Articles 226 and 32 to challenge arbitrary state actions. Our team secures immediate judicial review, status-quo orders, and the enforcement of fundamental and statutory rights.
+            </p>
+          </div>
+        </div>
+
+        <div class="practice-card p-8 bg-white border border-stone-200 shadow-sm hover:shadow-md transition duration-300 flex flex-col justify-between" data-category="corporate">
+          <div>
+            <div class="w-12 h-12 bg-brand-surface flex items-center justify-center text-brand-navy text-xl mb-6">
+              <i class="fa-solid fa-landmark"></i>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-brand-navy mb-3">Commercial & Contractual Disputes</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              We resolve breach of contract actions, vendor disputes, partnership conflicts, and business arbitrations. Our focus is on mitigating commercial interruption while securing enforceable financial and equitable remedies.
+            </p>
+          </div>
+        </div>
+
+        <div class="practice-card p-8 bg-white border border-stone-200 shadow-sm hover:shadow-md transition duration-300 flex flex-col justify-between" data-category="corporate">
+          <div>
+            <div class="w-12 h-12 bg-brand-surface flex items-center justify-center text-brand-navy text-xl mb-6">
+              <i class="fa-solid fa-landmark"></i>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-brand-navy mb-3">Banking & Debt Recovery (NI Act / Section 138)</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              We prosecute and defend cheque bounce complaints, summary recovery suits, and proceedings before Debt Recovery Tribunals. We execute targeted legal recovery strategies designed to expedite financial settlements.
+            </p>
+          </div>
+        </div>
+
+        <div class="practice-card p-8 bg-white border border-stone-200 shadow-sm hover:shadow-md transition duration-300 flex flex-col justify-between" data-category="corporate">
+          <div>
+            <div class="w-12 h-12 bg-brand-surface flex items-center justify-center text-brand-navy text-xl mb-6">
+              <i class="fa-solid fa-landmark"></i>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-brand-navy mb-3">Consumer Protection & Real Estate (RERA)</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              We represent homebuyers and commercial consumers before RERA authorities, state commissions, and the NCDRC. Our advocates pursue accountability, compensation, and delayed possession remedies against builder-developer defaults.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 7. ADMITTED PARTNERS                                                     -->
+  <!-- ========================================================================= -->
+  <section id="partners" class="py-24 bg-white border-y border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-2">
+        <span class="text-xs uppercase tracking-widest font-semibold text-brand-goldDark">Distinguished Counsel</span>
+        <h2 class="font-serif text-4xl font-bold text-brand-navy">Founding partners</h2>
+        <div class="w-12 h-0.5 bg-brand-gold mx-auto"></div>
+        <p class="text-slate-600 text-sm">
+          Seasoned advocates with admissions before the High Court of Justice and Supreme Court of India.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Partner 1 -->
+        <div class="border border-stone-200 bg-brand-parchment overflow-hidden group">
+          <div class="h-80 overflow-hidden relative">
+            <img src="C:\Users\user\Downloads\Satish Kumar.jpeg" alt="Satish Kumar" class="w-full h-full object-cover object-top filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-500">
+            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-brand-navy via-brand-navy/60 to-transparent p-4 text-white">
+              <span class="text-[10px] tracking-widest uppercase text-brand-gold">Senior Founding Partner</span>
+              <h3 class="font-serif text-2xl font-bold">Satish Kumar</h3>
+            </div>
+          </div>
+          <div class="p-6 space-y-4 text-xs">
+            <div>
+              <span class="text-slate-400 block font-medium uppercase tracking-wider mb-1">15+ Years of Advocacy</span>
+            </div>
+            <div class="pt-4 border-t border-stone-200 flex items-center justify-between">
+              <a href="mailto:a.sterling@vs.example" class="text-brand-navy hover:text-brand-gold font-bold transition">
+                <i class="fa-regular fa-envelope mr-1"></i> satishkumar23@gmail.com
+              </a>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Partner 2 -->
+        <div class="border border-stone-200 bg-brand-parchment overflow-hidden group">
+
+          <div class="h-80 overflow-hidden relative">
+            <img src="C:\Users\user\Downloads\WhatsApp Image 2026-11-04 at 10.09.31 PM.jpeg" alt="Baby Sharma" class="w-full h-full object-cover object-top filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-500">
+            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-brand-navy via-brand-navy/60 to-transparent p-4 text-white">
+              <span class="text-[10px] tracking-widest uppercase text-brand-gold">Senior Founding Partner</span>
+              <h3 class="font-serif text-2xl font-bold">Baby Sharma</h3>
+            </div>
+          </div>
+          <div class="p-6 space-y-4 text-xs">
+            <div>
+              <span class="text-slate-400 block font-medium uppercase tracking-wider mb-1">15+ Years of Advocacy</span>
+            </div>
+            <div>
+            </div>
+            <div class="pt-4 border-t border-stone-200 flex items-center justify-between">
+              <a href="mailto:e.vance@vs.example" class="text-brand-navy hover:text-brand-gold font-bold transition">
+                <i class="fa-regular fa-envelope mr-1"></i> babysharma24@gmail.com
+              </a>
+              </button>
+           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="partners" class="py-24 bg-white border-y border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <h2 class="font-serif text-4xl font-bold text-brand-navy">Associates</h2>
+        <div class="w-12 h-0.5 bg-brand-gold mx-auto"></div>
+        <p class="text-slate-600 text-sm">
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Partner 1 -->
+        <div class="border border-stone-200 bg-brand-parchment overflow-hidden group">
+          <div class="h-80 overflow-hidden relative">
+            <img src="C:\Users\user\Downloads\Tejpal.jpeg" alt="Tejpal" class="w-full h-full object-cover object-top filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-500">
+            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-brand-navy via-brand-navy/60 to-transparent p-4 text-white">
+              <span class="text-[10px] tracking-widest uppercase text-brand-gold">Investigator</span>
+              <h3 class="font-serif text-2xl font-bold">Tejpal Singh</h3>
+            </div>
+          </div>
+          <div class="p-6 space-y-4 text-xs">
+            <div>
+              <span class="text-slate-400 block font-medium uppercase tracking-wider mb-1">15+ Years of Advocacy</span>
+            </div>
+            <div class="pt-4 border-t border-stone-200 flex items-center justify-between">
+              <a href="mailto:a.sterling@vs.example" class="text-brand-navy hover:text-brand-gold font-bold transition">
+              </a>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Partner 2 -->
+        <div class="border border-stone-200 bg-brand-parchment overflow-hidden group">
+          <div class="h-80 overflow-hidden relative">
+            <img src="C:\Users\user\Downloads\Sumit Goel.jpeg" alt="Baby Sharma" class="w-full h-full object-cover object-top filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-500">
+            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-brand-navy via-brand-navy/60 to-transparent p-4 text-white">
+              <span class="text-[10px] tracking-widest uppercase text-brand-gold">Associated Advocate</span>
+              <h3 class="font-serif text-2xl font-bold">Sumit Goel</h3>
+            </div>
+          </div>
+          <div class="p-6 space-y-4 text-xs">
+            <div>
+              <span class="text-slate-400 block font-medium uppercase tracking-wider mb-1">15+ Years of Advocacy</span>
+            </div>
+            <div>
+            </div>
+            <div class="pt-4 border-t border-stone-200 flex items-center justify-between">
+              </a>
+              </button>
+           </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+                                                
+ 
+  <!-- ========================================================================= -->
+  <!-- 8. CONTACT & CONFLICT CLEARANCE FORM                                     -->
+  <!-- ========================================================================= -->
+  <section id="contact" class="py-24 bg-brand-navy text-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <div class="lg:col-span-5 space-y-8">
+          <div>
+            <h2 class="font-serif text-4xl font-bold mt-2">Primary Offices</h2>
+            <div class="w-12 h-0.5 bg-brand-gold mt-4"></div>
+          </div>
+
+          <div class="space-y-6 text-xs text-slate-300">
+            <div class="p-5 bg-white/5 border border-white/10">
+              <h4 class="font-serif text-lg font-bold text-white mb-1">Chamber 354, Lawyers Block, Saket Court, New Delhi</h4>
+              <p class="mt-2 text-brand-gold">Tel: +919899233667 </p>
+            </div>
+
+            <div class="p-5 bg-white/5 border border-white/10">
+              <h4 class="font-serif text-lg font-bold text-white mb-1">B-51A, BGS Block, Tis Hazari Court, Delhi</h4>
+              <p class="mt-2 text-brand-gold">Tel: +919599439768</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 bg-white text-slate-900 p-8 sm:p-10 shadow-2xl rounded-sm">
+          <h3 class="font-serif text-2xl font-bold text-brand-navy mb-2">Formal Inquiry</h3>
+          <p class="text-xs text-slate-500 mb-6">
+            Please provide non-confidential details. Submission does not establish an attorney-client relationship.
+          </p>
+
+          <form id="inquiry-form" class="space-y-4" onsubmit="handleInquirySubmit(event)">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-700 mb-1">Full Name *</label>
+                <input type="text" required class="w-full text-xs px-3 py-2.5 bg-slate-50 border border-slate-300 focus:outline-none focus:border-brand-navy" placeholder="e.g. Abhishek Kumar">
+              </div>
+              <div>
+                <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-700 mb-1">profession*</label>
+                <input type="text" class="w-full text-xs px-3 py-2.5 bg-slate-50 border border-slate-300 focus:outline-none focus:border-brand-navy" placeholder="e.g. Private Employee">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-700 mb-1">Email Address *</label>
+                <input type="email" required class="w-full text-xs px-3 py-2.5 bg-slate-50 border border-slate-300 focus:outline-none focus:border-brand-navy" placeholder="Abhishekkumar@gmail.com">
+              </div>
+              <div>
+                <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-700 mb-1">Residence*</label>
+                <input type="text" class="w-full text-xs px-3 py-2.5 bg-slate-50 border border-slate-300 focus:outline-none focus:border-brand-navy" placeholder="e.g. New Delhi">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-700 mb-1">Enquiry About*</label>
+              <input type="text" required class="w-full text-xs px-3 py-2.5 bg-slate-50 border border-slate-300 focus:outline-none focus:border-brand-navy" placeholder="Potential Matter">
+            </div>
+
+            <div>
+              <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-700 mb-1">Summary of Matter *</label>
+              <textarea rows="4" required class="w-full text-xs px-3 py-2.5 bg-slate-50 border border-slate-300 focus:outline-none focus:border-brand-navy" placeholder="Do not include privileged or confidential trade secrets prior to formal conflict clearance..."></textarea>
+            </div>
+
+            <div class="flex items-start space-x-3 pt-2">
+              <input type="checkbox" id="conflict-ack" required class="mt-1 h-4 w-4 rounded border-slate-300 text-brand-navy focus:ring-brand-gold">
+              <label for="conflict-ack" class="text-[11px] text-slate-500 leading-normal">
+                I understand that submitting this inquiry does not establish an attorney-client relationship. SBS Authentic Legum will conduct an ethical review before receiving confidential information.
+              </label>
+            </div>
+
+            <button type="submit" class="w-full py-3.5 bg-brand-navy hover:bg-brand-slate text-brand-gold font-bold text-xs uppercase tracking-widest transition duration-300 shadow-md">
+              Submit Inquiry
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 10. INSTITUTIONAL FOOTER                                                 -->
+  <!-- ========================================================================= -->
+  <footer class="bg-black text-slate-400 text-xs py-14 border-t border-brand-gold/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div class="space-y-3">
+          <span class="font-serif text-lg font-bold text-white tracking-wider">SBS Authentic Legum</span>
+          <p class="text-slate-500 text-[11px] leading-relaxed">
+            Registered Limited Liability Partnership registered in India. Authorized and regulated by the Regulation Authority.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-white uppercase font-bold tracking-wider text-[11px] mb-3">Key Practices</h4>
+          <ul class="space-y-1.5 text-slate-500 text-[11px]">
+            <li>Commercial Dispute Resolution</li>
+            <li>Energy &amp; Sovereign Arbitration</li>
+            <li>Antitrust &amp; Cartel Inquiries</li>
+            <li>Structured Corporate Finance</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white uppercase font-bold tracking-wider text-[11px] mb-3">Governance</h4>
+          <ul class="space-y-1.5 text-slate-500 text-[11px]">
+            <li><a href="javascript:void(0)" onclick="showRegulatoryModal()" class="hover:text-brand-gold transition">Regulatory Disclaimers</a></li>
+            <li><a href="#" class="hover:text-brand-gold transition">Client Due Diligence (AML) Policy</a></li>
+            <li><a href="#" class="hover:text-brand-gold transition">Privacy &amp; Cookie Consent (GDPR)</a></li>
+            <li><a href="#" class="hover:text-brand-gold transition">Anti-Bribery &amp; Ethics Statement</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center text-[10px] text-slate-500 gap-4">
+        <p>&copy; 2026 SBS Authentic legam. All worldwide rights reserved. Attorney Advertising.</p>
+        <div class="flex space-x-6">
+          <a href="#" class="hover:text-white transition">Terms of Engagement</a>
+          <a href="#" class="hover:text-white transition">Transparency in Pricing</a>
+          <a href="#" class="hover:text-white transition">Site Architecture</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- 11. IN-PAGE READING MODAL                                                -->
+  <!-- ========================================================================= -->
+  <div id="briefing-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+    <div class="bg-white max-w-2xl w-full p-8 shadow-2xl relative max-h-[85vh] overflow-y-auto">
+      <button onclick="closeBriefingModal()" class="absolute top-6 right-6 text-slate-400 hover:text-black text-xl">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="text-[10px] uppercase tracking-widest text-brand-goldDark font-bold mb-2" id="bm-meta"></div>
+      <h3 class="font-serif text-3xl font-bold text-brand-navy mb-4" id="bm-title"></h3>
+      <div class="w-12 h-0.5 bg-brand-gold mb-6"></div>
+      <div class="text-slate-700 text-sm leading-relaxed space-y-4" id="bm-content"></div>
+      <div class="mt-8 pt-6 border-t border-stone-200 flex justify-end">
+        <button onclick="closeBriefingModal()" class="px-6 py-2 bg-brand-navy text-white text-xs uppercase tracking-widest">Close Memorandum</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- 13. JAVASCRIPT LOGIC                                                      -->
+  <!-- ========================================================================= -->
+  <script>
+    function showRegulatoryModal() {
+      const modal = document.getElementById('disclaimer-modal');
+      if (modal) {
+        modal.style.removeProperty('display');
+        modal.classList.remove('hidden');
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+  // Always keep it visible on load
+  const modal = document.getElementById('disclaimer-modal');
+  if (modal) {
+    modal.style.display = 'flex';
+  }
+});
+   
+    function toggleMobileNav() {
+      const menu = document.getElementById('mobile-menu');
+      if (menu) menu.classList.toggle('hidden');
+    }
+
+    function filterPractices(category, btnElement) {
+      const buttons = document.querySelectorAll('.practice-tab-btn');
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-brand-navy', 'text-white');
+        btn.classList.add('bg-white', 'text-slate-700');
+      });
+
+      if (btnElement) {
+        btnElement.classList.add('bg-brand-navy', 'text-white');
+        btnElement.classList.remove('bg-white', 'text-slate-700');
+      }
+
+      const cards = document.querySelectorAll('.practice-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    function downloadVCard(name, title, email, phone) {
+      const vCardData = 
+`BEGIN:VCARD
+VERSION:3.0
+FN:${name}
+ORG:Vanguard & Sterling LLP
+TITLE:${title}
+EMAIL;TYPE=WORK:${email}
+TEL;TYPE=WORK:${phone}
+URL:https://www.vanguardsterling.example
+END:VCARD`;
+
+      const blob = new Blob([vCardData], { type: 'text/vcard;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', `${name.replace(/\s+/g, '_')}.vcf`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      showToast(`vCard for ${name} downloaded.`);
+    }
+
+    function openBriefingModal(title, author, date, excerpt) {
+      document.getElementById('bm-meta').innerText = `${author} • ${date}`;
+      document.getElementById('bm-title').innerText = title;
+      document.getElementById('bm-content').innerHTML = `
+        <p class="font-semibold text-slate-800">${excerpt}</p>
+        <p>This memorandum examines the procedural, statutory, and cross-border ramifications impacting institutional counsel. All citations comply with Bluebook standards and international precedent.</p>
+        <p>To request the full 42-page unredacted white paper or discuss implications with the authors, contact the firm's publications library at <span class="text-brand-goldDark underline">library@vs.example</span>.</p>
+      `;
+      document.getElementById('briefing-modal').classList.remove('hidden');
+    }
+
+    function closeBriefingModal() {
+      document.getElementById('briefing-modal').classList.add('hidden');
+    }
+
+    function togglePortalModal(show) {
+      const modal = document.getElementById('portal-modal');
+      if (show) modal.classList.remove('hidden');
+      else modal.classList.add('hidden');
+    }
+
+    function handlePortalLogin(e) {
+      e.preventDefault();
+      togglePortalModal(false);
+      showToast('Client authentication request submitted for verification.');
+    }
+
+    function handleInquirySubmit(e) {
+      e.preventDefault();
+      showToast('Inquiry submitted. Conflicts clearance verification initiated.');
+      e.target.reset();
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toast-message').innerText = message;
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 4500);
+    }
+  </script>
+</body>
+</html>
